@@ -2,8 +2,6 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: 80px 400px 80px; 
-  grid-template-rows: 80px 400px 80px; 
-  grid-template-rows: 80px 400px 80px;  
   background-color: #1e90ff;
   padding: 5px;
   gap: 5px;  
