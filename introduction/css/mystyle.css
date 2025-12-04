@@ -1,5 +1,7 @@
 body {
   background: #000000 url(https://pbs.twimg.com/media/GRZah7mW4AIyNSu?format=jpg&name=4096x4096);
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: Arial, sans-serif;
   color: #e6d7ff;
   margin: 0;
