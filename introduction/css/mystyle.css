@@ -1,19 +1,19 @@
 body {
-  background-color: #e6f2ff;
+  background-color: #1b0f27;     
   font-family: Arial, sans-serif;
-  color: #333;
+  color: #e6d7ff;                
   margin: 0;
   padding: 20px;
 }
 
 h1 {
-  color: #003366;
+  color: #b3003b;                
   text-align: center;
   margin-bottom: 30px;
 }
 
 h3 {
-  color: #0059b3;
+  color: #cc0052;                
   margin-top: 25px;
   margin-bottom: 5px;
 }
@@ -26,6 +26,7 @@ p {
 img {
   width: 250px;
   border-radius: 10px;
+  border: 3px solid #b3003b;     
   display: block;
   margin-top: 10px;
 }
