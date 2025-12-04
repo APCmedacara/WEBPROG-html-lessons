@@ -23,10 +23,4 @@ p {
   line-height: 1.5;
 }
 
-img {
-  width: 500px;            
-  display: block;
-  margin: 20px auto;      
-  border-radius: 10px;
-  border: 3px solid #b3003b;
-}
+
