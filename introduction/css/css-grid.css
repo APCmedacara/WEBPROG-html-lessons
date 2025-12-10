@@ -2,15 +2,15 @@
   display: grid;
   grid-template-columns: 500px 500px 500px;
   grid-template-rows: 500px 500px 500px; 
-  background-color: #1e90ff;
+  background: #000000 url(https://pbs.twimg.com/media/GRZah7mW4AIyNSu?format=jpg&name=4096x4096) no-repeat center center;
   padding: 5px;
   gap: 5px;  
 }
 .container div {
-  background-color: #f1f1f1;
+  background-color: #1f0712;
   color:#000;
   padding: 10px;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -54,4 +54,4 @@ img {
   display: block;
   margin: 20px auto;    
   border-radius: 10px;
-  border: 3px solid #b3003b;
+}
