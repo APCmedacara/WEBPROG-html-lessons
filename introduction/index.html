@@ -1,89 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harvey Personal Profile</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Profile</title>
 
-  <link rel="stylesheet" href="css/flexbox-grid.css">
+  <link rel="stylesheet" href="mystyle.css" />
 
   <!-- Vue CDN -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 
-<div class="container">
+<header>
+  <h1>Harvey's Personal Profile</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#guestbook">Guestbook</a>
+    <a href="resources.html">Resources</a>
+  </nav>
+</header>
 
-  <header>
-    <h1>Harvey's Personal Profile</h1>
-  </header>
+<main>
 
-  <main>
+<!-- ABOUT SECTION -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Hello! I am Harvey, an IT student who enjoys web development,
+    UI design, and learning modern frameworks like Vue.js.
+  </p>
 
-    <!-- MAIN CONTENT -->
-    <section class="main-content">
+  <button id="themeBtn">Toggle Dark Mode</button>
+</section>
 
-      <section>
-        <h3>About Me</h3>
-        <p>I like to travel, money is the only thing stopping me.</p>
-      </section>
+<!-- VUE GALLERY -->
+<section id="gallery">
+  <h2>Picture Gallery</h2>
 
-      <section>
-        <h3>Education / Achievements</h3>
-        <p>Finished Senior High School</p>
-        <p>Currently in College</p>
-      </section>
+  <div id="galleryApp" class="gallery-box">
+    <figure v-for="img in images">
+      <img :src="img.url" :alt="img.name">
+      <figcaption>{{ img.name }}</figcaption>
+    </figure>
+  </div>
+</section>
 
-      <section>
-        <h3>Course / Program</h3>
-        <p>Bachelor of Science in Information Technology (BSIT)</p>
-      </section>
+<!-- VUE GUESTBOOK -->
+<section id="guestbook">
+  <h2>Guestbook / Comments</h2>
 
-      <section>
-        <h3>IT Experience</h3>
-        <p>Learned HTML and GitHub a few minutes ago</p>
-      </section>
+  <div id="guestbookApp" class="guestbook-box">
+    <form @submit.prevent="addComment">
+      <input type="text" placeholder="Your name" v-model="name" required>
+      <textarea placeholder="Your message" v-model="message" required></textarea>
+      <button type="submit">Post Comment</button>
+    </form>
 
-      <section>
-        <h3>Hobbies & Interests</h3>
-        <p>Cycling, Hiking, Travelling, Sleeping</p>
-      </section>
+    <ul>
+      <li v-for="c in comments">
+        <strong>{{ c.name }}</strong>: {{ c.message }}
+      </li>
+    </ul>
+  </div>
+</section>
 
-      <section>
-        <h3>Goals In Life / Dream</h3>
-        <p>To be rich</p>
-        <p>To start my own business</p>
-      </section>
+</main>
 
-      <!-- VUE PICTURE GALLERY -->
-      <section>
-        <h3>Picture Gallery</h3>
-        <div id="galleryApp" class="gallery">
-          <figure v-for="img in pictures">
-            <img :src="img.url" :alt="img.name">
-            <figcaption>{{ img.name }}</figcaption>
-          </figure>
-        </div>
-      </section>
+<footer>
+  <p>© 2026 Harvey | Personal Profile Website</p>
+</footer>
 
-    </section>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <h3>Navigation</h3>
-      <a href="#about">About Me</a>
-      <a href="#gallery">Gallery</a>
-      <a href="resources.html">Resources</a>
-    </aside>
-
-  </main>
-
-  <footer>
-    APC WEBPROG
-  </footer>
-
-</div>
-
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
