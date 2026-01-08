@@ -1,31 +1,35 @@
+/* ===== Global ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 body {
-  background: #f9fafb;
-  color: #222;
+  background: #fdfdfd;
+  color: #1c1c1c;
   line-height: 1.6;
   transition: background 0.3s, color 0.3s;
 }
 
+h1, h2, h3 {
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-weight: 700;
+}
+
 header {
-  background: #1e88e5;
+  background: #000;
   color: #fff;
-  padding: 20px;
   text-align: center;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 header h1 {
-  font-weight: 700;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #dc143c;
 }
 
 nav a {
@@ -33,33 +37,32 @@ nav a {
   margin: 0 16px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #ffeb3b;
+  color: #dc143c;
 }
 
 main {
-  padding: 30px 20px;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: auto;
 }
 
 section {
   margin-bottom: 50px;
-  padding: 30px;
+  padding: 30px 25px;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  width: calc(100% - 40px); 
-  max-width: 1200px;
+  transition: background 0.3s, color 0.3s;
 }
 
 h2 {
-  color: #1e88e5;
+  color: #dc143c;
   margin-bottom: 25px;
-  font-weight: 700;
+  font-size: 1.8rem;
 }
 
 .intro {
@@ -80,8 +83,8 @@ h2 {
   height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  border: 4px solid #1e88e5;
+  border: 3px solid #dc143c;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
 .about-grid {
@@ -92,7 +95,7 @@ h2 {
 }
 
 .about-card {
-  background: #f4f6f8;
+  background: #f9f9f9;
   padding: 20px;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
@@ -105,25 +108,23 @@ h2 {
 }
 
 .about-card h3 {
+  color: #dc143c;
   margin-bottom: 12px;
-  color: #1e88e5;
-  font-weight: 700;
 }
 
 button {
   padding: 12px 24px;
-  background: #1e88e5;
-  color: white;
+  background: #dc143c;
+  color: #fff;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
   font-weight: 600;
-  font-size: 1rem;
+  cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background: #1565c0;
+  background: #a90f2e;
   transform: translateY(-2px);
 }
 
@@ -134,17 +135,17 @@ button:hover {
 }
 
 figure {
-  background: #e3f2fd;
+  background: #fff0f2;
   padding: 15px;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 figure:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 figure img {
@@ -158,63 +159,65 @@ figure img {
 figcaption {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #333;
+  color: #1c1c1c;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background: #eee;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  background: #000;
+  color: #fff;
   font-size: 0.9rem;
-  color: #555;
 }
 
-/* Dark Mode */
+/* ===== Dark Mode ===== */
 .dark {
-  background: #12090d;
-  color: #f2d6dc;
+  background: #121212;
+  color: #f5f5f5;
 }
 
 .dark header {
-  background: #1d0f14;
+  background: #000;
+}
+
+.dark header h1 {
+  color: #dc143c;
 }
 
 .dark nav a {
-  color: #f2d6dc;
+  color: #f5f5f5;
 }
 
 .dark nav a:hover {
-  color: #b8324a;
+  color: #dc143c;
 }
 
 .dark section {
-  background: #1d0f14;
+  background: #1c1c1c;
 }
 
 .dark h2, .dark h3 {
-  color: #b8324a;
+  color: #dc143c;
 }
 
 .dark .about-card {
-  background: #241218;
+  background: #242424;
 }
 
 .dark figure {
-  background: #241218;
+  background: #2a2a2a;
+}
+
+.dark figcaption {
+  color: #f5f5f5;
 }
 
 .dark footer {
-  background: #1d0f14;
-  color: #f2d6dc;
+  background: #000;
+  color: #f5f5f5;
 }
 
-.dark .profile-pic {
-  border-color: #b8324a;
-}
-
-/* Responsive tweaks */
+/* Responsive */
 @media (max-width: 600px) {
   header h1 {
     font-size: 1.5rem;

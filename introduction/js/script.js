@@ -8,9 +8,10 @@ Vue.createApp({
   data() {
     return {
       images: [
-        { name: "1", url: "images/img1.jpg" },
-        { name: "2", url: "images/img2.jpg" },
-        { name: "3", url: "images/img3.jpg" }
+        { name: "Profile Pic", url: "images/profile.jpg" },
+        { name: "Project 1", url: "images/img1.jpg" },
+        { name: "Project 2", url: "images/img2.jpg" },
+        { name: "Project 3", url: "images/img3.jpg" }
       ]
     };
   }
