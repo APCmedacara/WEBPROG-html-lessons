@@ -19,13 +19,43 @@ header {
   top: 0;
   z-index: 1000;
 }
-header .header-content { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 100%; }
-header h1 { color: #dc143c; font-size: 3rem; font-weight: 900; }
-header nav { display: flex; align-items: center; gap: 16px; }
+header .header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+header h1 {
+  color: #dc143c;
+  font-size: 3rem; /* BIGGER now */
+  font-weight: 900;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ===== Dark Mode Button ===== */
+header nav button {
+  padding: 12px 24px;       /* bigger padding */
+  font-size: 1.2rem;        /* larger text */
+  font-weight: 700;          /* bolder font */
+  background: #dc143c;
+  border: none;
+  border-radius: 8px;        /* slightly bigger radius */
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+header nav button:hover {
+  background: #a90f2e;
+  transform: scale(1.05);   /* subtle grow on hover */
+}
+
 header nav a { color: #fff; font-weight: 600; transition: color 0.3s; }
 header nav a:hover { color: #dc143c; }
-header nav button { padding: 8px 16px; background: #dc143c; border: none; border-radius: 6px; color: #fff; cursor: pointer; font-weight: 600; transition: background 0.3s; }
-header nav button:hover { background: #a90f2e; }
 
 /* ===== Hero Section ===== */
 .hero-section { width: 100%; background: #f8f8f8; padding: 60px 20px; }
