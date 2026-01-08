@@ -25,26 +25,29 @@
   <!-- Hero / About Section -->
   <section id="about" class="hero-section">
     <div class="hero-container">
+      <!-- Profile Image -->
       <div class="hero-image">
         <img src="images/profile.jpg" alt="Harvey Profile">
       </div>
+      <!-- Intro Text -->
       <div class="hero-text">
         <h2>Hello, I'm <span class="highlight">Harvey</span></h2>
         <p>
           I’m an IT student passionate about web development, UI/UX design, and
-          modern JavaScript frameworks like Vue.js. I build clean, intuitive, and
-          visually compelling websites while refining my technical and creative skills.
+          modern JavaScript frameworks like Vue.js. I focus on building clean,
+          intuitive, and visually compelling websites while refining my skills.
         </p>
+        <!-- About Cards -->
         <div class="hero-cards">
-          <div class="card">
+          <div class="card clickable" data-link="education.html">
             <h3>Education</h3>
-            <p>Currently pursuing a degree in Information Technology, building a strong foundation in programming, databases, and web technologies.</p>
+            <p>Currently pursuing a degree in IT, strengthening my foundation in programming, databases, and web technologies.</p>
           </div>
-          <div class="card">
+          <div class="card clickable" data-link="goals.html">
             <h3>Goals</h3>
             <p>Aspiring to create meaningful, accessible, and visually appealing web applications.</p>
           </div>
-          <div class="card">
+          <div class="card clickable" data-link="interests.html">
             <h3>Interests</h3>
             <p>UI/UX design, coding personal projects, learning frameworks, and improving user experiences.</p>
           </div>
@@ -57,7 +60,7 @@
   <section id="gallery">
     <h2>Portfolio</h2>
     <div id="galleryApp" class="gallery-grid">
-      <figure v-for="img in images" :key="img.name">
+      <figure class="clickable" v-for="img in images" :key="img.name" :data-link="img.link">
         <img :src="img.url" :alt="img.name">
         <figcaption>{{ img.name }}</figcaption>
       </figure>
