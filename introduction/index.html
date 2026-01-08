@@ -3,66 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harvey | Personal Profile</title>
+  <title>Harvey | Portfolio</title>
   <link rel="stylesheet" href="css/mystyle.css">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 
 <header>
-  <h1>Harvey's Portfolio</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="resources.html">Resources</a>
-  </nav>
+  <div class="header-content">
+    <h1>Harvey</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="resources.html">Resources</a>
+      <button id="themeBtn">Toggle Dark Mode</button>
+    </nav>
+  </div>
 </header>
 
 <main>
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-header">
-      <img src="images/profile.jpg" alt="Harvey profile photo" class="profile-pic">
-      <div>
-        <p class="intro">
-          Hello! I’m <strong>Harvey</strong>, an IT student passionate about
-          web development, UI/UX design, and modern JavaScript frameworks like Vue.js.
-          I focus on creating clean, intuitive, and visually compelling websites
-          while continuously refining my technical skills.
+  <!-- Hero / About Section -->
+  <section id="about" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-image">
+        <img src="images/profile.jpg" alt="Harvey Profile">
+      </div>
+      <div class="hero-text">
+        <h2>Hello, I'm <span class="highlight">Harvey</span></h2>
+        <p>
+          I’m an IT student passionate about web development, UI/UX design, and
+          modern JavaScript frameworks like Vue.js. I build clean, intuitive, and
+          visually compelling websites while refining my technical and creative skills.
         </p>
+        <div class="hero-cards">
+          <div class="card">
+            <h3>Education</h3>
+            <p>Currently pursuing a degree in Information Technology, building a strong foundation in programming, databases, and web technologies.</p>
+          </div>
+          <div class="card">
+            <h3>Goals</h3>
+            <p>Aspiring to create meaningful, accessible, and visually appealing web applications.</p>
+          </div>
+          <div class="card">
+            <h3>Interests</h3>
+            <p>UI/UX design, coding personal projects, learning frameworks, and improving user experiences.</p>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="about-grid">
-      <div class="about-card">
-        <h3>Education</h3>
-        <p>
-          Currently pursuing a degree in Information Technology, strengthening my
-          foundation in programming, databases, and web technologies.
-        </p>
-      </div>
-      <div class="about-card">
-        <h3>Goals</h3>
-        <p>
-          To become a web developer crafting meaningful, accessible,
-          and visually appealing applications.
-        </p>
-      </div>
-      <div class="about-card">
-        <h3>Hobbies & Interests</h3>
-        <p>
-          UI/UX design, personal coding projects, learning new frameworks,
-          and enhancing user experience.
-        </p>
-      </div>
-    </div>
-
-    <button id="themeBtn">Toggle Dark Mode</button>
   </section>
 
+  <!-- Gallery Section -->
   <section id="gallery">
-    <h2>Gallery</h2>
-    <div id="galleryApp" class="gallery-box">
+    <h2>Portfolio</h2>
+    <div id="galleryApp" class="gallery-grid">
       <figure v-for="img in images" :key="img.name">
         <img :src="img.url" :alt="img.name">
         <figcaption>{{ img.name }}</figcaption>
@@ -72,7 +66,7 @@
 </main>
 
 <footer>
-  <p>© 2026 Harvey | Personal Profile</p>
+  <p>© 2026 Harvey | Portfolio</p>
 </footer>
 
 <script src="js/script.js"></script>
