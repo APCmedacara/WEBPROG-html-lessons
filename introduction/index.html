@@ -29,36 +29,36 @@
 
     <div>
       <p class="intro">
-        Hello! I’m <strong>Harvey</strong>, an IT student with a strong interest in
+        Hello! I’m <strong>Harvey</strong>, an IT student passionate about
         web development, UI design, and modern JavaScript frameworks like Vue.js.
-        I enjoy building clean, user-friendly websites and continuously improving
-        my technical and creative skills.
+        I enjoy building clean, user-friendly websites while honing my technical
+        and creative skills.
       </p>
     </div>
   </div>
 
   <div class="about-grid">
     <div class="about-card">
-      <h3>🎓 Education</h3>
+      <h3>Education</h3>
       <p>
-        I am currently pursuing a degree in Information Technology, building a
-        strong foundation in programming, databases, and web technologies.
+        Currently pursuing a degree in Information Technology, building a strong
+        foundation in programming, databases, and web technologies.
       </p>
     </div>
 
     <div class="about-card">
-      <h3>🎯 Goals</h3>
+      <h3>Goals</h3>
       <p>
-        My goal is to become a skilled web developer who creates meaningful,
-        accessible, and visually appealing applications.
+        To become a skilled web developer who creates meaningful, accessible,
+        and visually appealing applications.
       </p>
     </div>
 
     <div class="about-card">
-      <h3>🎨 Hobbies & Interests</h3>
+      <h3>Hobbies & Interests</h3>
       <p>
-        I enjoy UI design, coding personal projects, learning new frameworks,
-        and exploring creative ways to improve user experience.
+        Enjoy UI design, coding personal projects, exploring new frameworks,
+        and improving user experience.
       </p>
     </div>
   </div>
@@ -84,5 +84,23 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script>
+  const galleryApp = Vue.createApp({
+    data() {
+      return {
+        images: [
+          { name: "Profile Pic", url: "images/profile.jpg" },
+          { name: "Project Screenshot", url: "images/project.jpg" }
+        ]
+      }
+    }
+  }).mount('#galleryApp');
+
+  
+  const themeBtn = document.getElementById('themeBtn');
+  themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
+</script>
 </body>
 </html>
