@@ -39,15 +39,15 @@
         </p>
         <!-- About Cards -->
         <div class="hero-cards">
-          <div class="card clickable" data-link="education.html">
+          <div class="card">
             <h3>Education</h3>
             <p>Currently pursuing a degree in IT, strengthening my foundation in programming, databases, and web technologies.</p>
           </div>
-          <div class="card clickable" data-link="goals.html">
+          <div class="card">
             <h3>Goals</h3>
             <p>Aspiring to create meaningful, accessible, and visually appealing web applications.</p>
           </div>
-          <div class="card clickable" data-link="interests.html">
+          <div class="card">
             <h3>Interests</h3>
             <p>UI/UX design, coding personal projects, learning frameworks, and improving user experiences.</p>
           </div>
@@ -60,7 +60,7 @@
   <section id="gallery">
     <h2>Portfolio</h2>
     <div id="galleryApp" class="gallery-grid">
-      <figure class="clickable" v-for="img in images" :key="img.name" :data-link="img.link">
+      <figure v-for="img in images" :key="img.name">
         <img :src="img.url" :alt="img.name">
         <figcaption>{{ img.name }}</figcaption>
       </figure>
