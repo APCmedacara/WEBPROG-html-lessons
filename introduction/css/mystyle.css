@@ -1,84 +1,196 @@
+/* GLOBAL RESET */
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   background: #f4f6f8;
   color: #333;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
 }
 
+/* HEADER */
 header {
   background: #1e88e5;
   color: white;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
+  margin: 0 12px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
+nav a:hover {
+  color: #ffeb3b;
+}
+
+/* MAIN SECTIONS */
 main {
-  padding: 20px;
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
 
+section:hover {
+  transform: translateY(-3px);
+}
+
+h2 {
+  color: #1e88e5;
+  margin-bottom: 15px;
+}
+
+/* ABOUT BUTTON */
+#themeBtn {
+  padding: 10px 20px;
+  background: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#themeBtn:hover {
+  background: #1565c0;
+  transform: scale(1.05);
+}
+
+/* GALLERY */
 .gallery-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
 figure {
-  width: 120px;
-  margin: 10px;
+  width: 150px;
+  margin: 0;
   background: #e3f2fd;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 15px;
+  border-radius: 12px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+figure:hover {
+  transform: translateY(-5px) scale(1.05);
 }
 
 figure img {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
+/* GUESTBOOK */
 .guestbook-box input,
 .guestbook-box textarea {
   width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
 }
 
-button {
-  padding: 8px 15px;
+.guestbook-box input:focus,
+.guestbook-box textarea:focus {
+  outline: none;
+  border-color: #1e88e5;
+}
+
+.guestbook-box button {
+  padding: 10px 20px;
   background: #1e88e5;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
 }
 
+.guestbook-box button:hover {
+  background: #1565c0;
+  transform: scale(1.05);
+}
+
+/* COMMENTS LIST */
+.guestbook-box ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.guestbook-box li {
+  background: #f4f6f8;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 15px;
-  background: #ddd;
+  padding: 20px;
+  background: #eee;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* DARK MODE */
 .dark {
   background: #121212;
-  color: white;
+  color: #eee;
 }
 
 .dark header {
-  background: #000;
+  background: #1a1a1a;
+}
+
+.dark section {
+  background: #1f1f1f;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+.dark .guestbook-box input,
+.dark .guestbook-box textarea {
+  background: #2c2c2c;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+.dark .guestbook-box li {
+  background: #1f1f1f;
 }
