@@ -6,14 +6,12 @@
   <title>Harvey | Personal Profile</title>
 
   <link rel="stylesheet" href="css/mystyle.css" />
-
-  <!-- Vue CDN -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 
 <header>
-  <h1>Mark Harvey's Personal Profile</h1>
+  <h1>Harvey's Personal Profile</h1>
   <nav>
     <a href="#about">About</a>
     <a href="#gallery">Gallery</a>
@@ -23,39 +21,44 @@
 
 <main>
 
-<!-- ABOUT SECTION -->
 <section id="about">
   <h2>About Me</h2>
 
-  <p class="intro">
-    Hello! I’m <strong>Harvey</strong>, an IT student in Asia Pacific College 
-    with a strong interest in web development, UI design, and modern JavaScript 
-    frameworks like Vue.js. I enjoy building clean, user-friendly websites and 
-    continuously improving my technical and creative skills.
-  </p>
+  <div class="about-header">
+    <img src="images/profile.jpg" alt="Harvey profile photo" class="profile-pic">
+
+    <div>
+      <p class="intro">
+        Hello! I’m <strong>Harvey</strong>, an IT student with a strong interest in
+        web development, UI design, and modern JavaScript frameworks like Vue.js.
+        I enjoy building clean, user-friendly websites and continuously improving
+        my technical and creative skills.
+      </p>
+    </div>
+  </div>
 
   <div class="about-grid">
     <div class="about-card">
       <h3>🎓 Education</h3>
       <p>
-        I am currently pursuing a degree in Bachelor of Science in Information Technology, 
-        where I am gaining knowledge in programming, databases, and web technologies.
+        I am currently pursuing a degree in Information Technology, building a
+        strong foundation in programming, databases, and web technologies.
       </p>
     </div>
 
     <div class="about-card">
       <h3>🎯 Goals</h3>
       <p>
-        My goal is to become a successful in life and using the things that I have 
-        learned in class to help me be a successful person. 
+        My goal is to become a skilled web developer who creates meaningful,
+        accessible, and visually appealing applications.
       </p>
     </div>
 
     <div class="about-card">
       <h3>🎨 Hobbies & Interests</h3>
       <p>
-        I actually enjoy designing UI. But other than that I also enjoy cycling and hiking.
-        I like going on adventures since. 
+        I enjoy UI design, coding personal projects, learning new frameworks,
+        and exploring creative ways to improve user experience.
       </p>
     </div>
   </div>
@@ -63,7 +66,6 @@
   <button id="themeBtn">Toggle Dark Mode</button>
 </section>
 
-<!-- GALLERY SECTION -->
 <section id="gallery">
   <h2>Picture Gallery</h2>
 
