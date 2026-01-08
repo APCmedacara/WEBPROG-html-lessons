@@ -1,60 +1,46 @@
-body {
-  background: #000000 url(https://pbs.twimg.com/media/GRZah7mW4AIyNSu?format=jpg&name=4096x4096) no-repeat center center;
-  background-size: cover;
+* {
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  color: #e6d7ff;
+}
+
+body {
   margin: 0;
-  padding: 0;
+  background-color: #eaeaea;
 }
 
-.content {
-  background-color: rgba(0, 0, 0, 0.7); 
-  margin: 20px auto;
-  padding: 20px 40px;
-  border-radius: 10px;
-  max-width: 900px;
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }
 
-h1 {
-  color: #b3003b;
+header, footer {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 30px;
 }
 
-h3 {
-  color: #cc0052;
-  margin-top: 25px;
-  margin-bottom: 10px;
+main {
+  display: flex;
+  flex-direction: row;
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 15px;
+.main-content {
+  flex: 3;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-img {
-  width: 500px;           
-  display: block;
-  margin: 20px auto;    
-  border-radius: 10px;
-  border: 3px solid #b3003b;
-}
-
-.nav {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.nav a {
-  color: #ff4d88;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
-
-.nav a:hover {
-  text-decoration: underline;
+.main-content > section {
+  background-color: #f1f1f1;
+  width: 300px;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .gallery {
@@ -64,32 +50,28 @@ img {
 }
 
 .gallery figure {
-  width: 180px;
-  margin: 10px;
+  width: 120px;
+  margin: 8px;
   text-align: center;
 }
 
 .gallery img {
   width: 100%;
-  border-radius: 8px;
-}
-
-button {
-  background-color: #b3003b;
-  color: white;
-  border: none;
-  padding: 8px 15px;
   border-radius: 5px;
-  cursor: pointer;
 }
 
-/* Mobile Responsive */
-@media (max-width: 600px) {
-  img {
-    width: 100%;
+.sidebar {
+  flex: 1;
+  background-color: #dedede;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
   }
 
-  .content {
-    padding: 15px;
+  .main-content > section {
+    width: 90%;
   }
 }

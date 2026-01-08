@@ -3,63 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harvey Personal Profile</title>
 
+  <title>Personal Profile Web Page</title>
   <link rel="stylesheet" href="css/mystyle.css">
 
-  <!-- Vue CDN -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 
-  <div class="content">
+<div class="container">
 
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="resources.html">Resources</a>
-    </nav>
-
+  <header>
     <h1>Personal Profile Web Page</h1>
+  </header>
 
-    <section id="about">
-      <h3>About Me</h3>
-      <p>I like to travel, money is the only thing stopping me.</p>
+  <main>
 
-      <h3>Education / Achievement</h3>
-      <p>Finished Senior High School</p>
-      <p>Currently in College</p>
+    <section class="main-content">
 
-      <h3>Course / Program</h3>
-      <p>Bachelor of Science in Information Technology (BSIT)</p>
+      <section>
+        <h3>About Me</h3>
+        <p>I like to travel, money is the only thing stopping me.</p>
+      </section>
 
-      <h3>IT Experience</h3>
-      <p>Learned HTML and GitHub a few minutes ago</p>
+      <section>
+        <h3>Education / Achievements</h3>
+        <p>Finished Senior High School</p>
+        <p>Currently in College</p>
+      </section>
 
-      <h3>Hobbies & Interests</h3>
-      <p>Cycling, Hiking, Travelling, Sleeping.</p>
+      <section>
+        <h3>Course / Program</h3>
+        <p>Bachelor of Science in Information Technology (BSIT)</p>
+      </section>
 
-      <h3>Goals In Life / Dream</h3>
-      <p>To be rich</p>
-      <p>To start my own business</p>
+      <section>
+        <h3>IT Experience</h3>
+        <p>Learned HTML and GitHub a few minutes ago</p>
+      </section>
 
-      <button id="themeBtn">Toggle Dark Effect</button>
+      <section>
+        <h3>Hobbies & Interests</h3>
+        <p>Cycling, Hiking, Travelling, Sleeping</p>
+      </section>
+
+      <section>
+        <h3>Goals In Life / Dream</h3>
+        <p>To be rich</p>
+        <p>To start my own business</p>
+      </section>
+
+      <section>
+        <h3>Picture Gallery</h3>
+
+        <div id="galleryApp" class="gallery">
+          <figure v-for="img in pictures">
+            <img :src="img.url" :alt="img.name">
+            <figcaption>{{ img.name }}</figcaption>
+          </figure>
+        </div>
+      </section>
+
     </section>
 
-    <!-- VUE PICTURE GALLERY -->
-    <section id="gallery">
-      <h3>Picture Gallery / Projects</h3>
+    <aside class="sidebar">
+      <h3>Navigation</h3>
+      <p><a href="resources.html">Resources</a></p>
+    </aside>
 
-      <div id="galleryApp" class="gallery">
-        <figure v-for="item in pictures">
-          <img :src="item.url" :alt="item.name">
-          <figcaption>{{ item.name }}</figcaption>
-        </figure>
-      </div>
-    </section>
+  </main>
 
-  </div>
+  <footer>
+    APC WEBPROG
+  </footer>
 
-  <script src="js/script.js"></script>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
