@@ -40,3 +40,56 @@ img {
   border-radius: 10px;
   border: 3px solid #b3003b;
 }
+
+.nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nav a {
+  color: #ff4d88;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery figure {
+  width: 180px;
+  margin: 10px;
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #b3003b;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  img {
+    width: 100%;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}

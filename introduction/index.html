@@ -1,39 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="css/mystyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harvey Personal Profile</title>
+
+  <link rel="stylesheet" href="css/mystyle.css">
+
+  <!-- Vue CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 
   <div class="content">
 
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+
     <h1>Personal Profile Web Page</h1>
 
-    <h3>About Me</h3>
-    <p>I like to travel, money is the only thing stopping me.</p>
+    <section id="about">
+      <h3>About Me</h3>
+      <p>I like to travel, money is the only thing stopping me.</p>
 
-    <h3>Education / Achievement</h3>
-    <p>Finished Senior High School</p>
-    <p>Currently in College</p>
+      <h3>Education / Achievement</h3>
+      <p>Finished Senior High School</p>
+      <p>Currently in College</p>
 
-    <h3>Course / Program</h3>
-    <p>Bachelor of Science in Information Technology (BSIT)</p>
+      <h3>Course / Program</h3>
+      <p>Bachelor of Science in Information Technology (BSIT)</p>
 
-    <h3>IT Experience</h3>
-    <p>Learned HTML and GitHub a few minutes ago</p>
+      <h3>IT Experience</h3>
+      <p>Learned HTML and GitHub a few minutes ago</p>
 
-    <h3>Hobbies & Interests</h3>
-    <p>Cycling, Hiking, Travelling, Sleeping.</p>
+      <h3>Hobbies & Interests</h3>
+      <p>Cycling, Hiking, Travelling, Sleeping.</p>
 
-    <h3>Goals In Life / Dream</h3>
-    <p>To be rich</p>
-    <p>To start my own business</p>
+      <h3>Goals In Life / Dream</h3>
+      <p>To be rich</p>
+      <p>To start my own business</p>
 
-    <h3>Picture Gallery</h3>
-    <img src="../images/kokushibo.png" alt="Upper Moon 1">
+      <button id="themeBtn">Toggle Dark Effect</button>
+    </section>
+
+    <!-- VUE PICTURE GALLERY -->
+    <section id="gallery">
+      <h3>Picture Gallery / Projects</h3>
+
+      <div id="galleryApp" class="gallery">
+        <figure v-for="item in pictures">
+          <img :src="item.url" :alt="item.name">
+          <figcaption>{{ item.name }}</figcaption>
+        </figure>
+      </div>
+    </section>
 
   </div>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
