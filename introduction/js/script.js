@@ -2,10 +2,7 @@ Vue.createApp({
   data() {
     return {
       pictures: [
-        {
-          name: "My First Project",
-          url: "images/kokushibo.png"
-        }
+        { name: "My First Project", url: "images/kokushibo.png" }
       ]
     }
   }

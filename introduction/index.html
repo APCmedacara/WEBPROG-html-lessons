@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harvey Personal Profile</title>
 
-  <title>Personal Profile Web Page</title>
-  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/flexbox-grid.css">
 
+  <!-- Vue CDN -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
@@ -14,11 +15,12 @@
 <div class="container">
 
   <header>
-    <h1>Personal Profile Web Page</h1>
+    <h1>Harvey's Personal Profile</h1>
   </header>
 
   <main>
 
+    <!-- MAIN CONTENT -->
     <section class="main-content">
 
       <section>
@@ -53,9 +55,9 @@
         <p>To start my own business</p>
       </section>
 
+      <!-- VUE PICTURE GALLERY -->
       <section>
         <h3>Picture Gallery</h3>
-
         <div id="galleryApp" class="gallery">
           <figure v-for="img in pictures">
             <img :src="img.url" :alt="img.name">
@@ -66,9 +68,12 @@
 
     </section>
 
+    <!-- SIDEBAR -->
     <aside class="sidebar">
       <h3>Navigation</h3>
-      <p><a href="resources.html">Resources</a></p>
+      <a href="#about">About Me</a>
+      <a href="#gallery">Gallery</a>
+      <a href="resources.html">Resources</a>
     </aside>
 
   </main>
